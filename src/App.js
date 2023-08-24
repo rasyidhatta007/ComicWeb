@@ -1,25 +1,35 @@
-import logo from './logo.svg';
-import './App.css';
+import './App.css'
+import NavigationBar from './components/NavigationBar'
+import Intro from "./components/Intro"
+import Korea from "./components/Korea"
+import Japan from "./components/Japan"
+
+import "./style/landingPage.css"
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+      <div>
+        {/* Intro Section */}
+          <div className="myBG">
+            <NavigationBar />
+            <Intro />
+          </div>
+        {/* end of intro */}
+
+        {/* Korea Section */}
+          <div className="korea">
+            <Korea/>
+          </div>
+        {/* End of Korea */}
+
+        {/* Japan Section */}
+        <div className="japan">
+          <Japan/>
+        </div>
+        {/* End of Japan */}
+        
+      </div>
   );
 }
 
-export default App;
+export default App
